@@ -129,16 +129,21 @@ int main(int argc, char **argv) {
 
     vector<int> temp_vector = input_vector;
     
+    cout << "--------\n";
     cout << "HeapSort: " << "Runtime: ";
     TestTiming(HeapSortTester, input_vector, "less");
     cout << "Verified: " << VerifyOrder(input_vector, less<int>{}) << "\n";
 
     input_vector = temp_vector;
+
+    cout << "--------\n";
     cout << "MergeSort: " << "Runtime: ";
     TestTiming(MergeSortTester, input_vector, "less");
     cout << "Verified: " << VerifyOrder(input_vector, less<int>{}) << "\n";
 
     input_vector = temp_vector;
+    
+    cout << "--------\n";
     cout << "Quicksort: Runtime: ";
     TestTiming(QuickSortTester, input_vector, "less");
     cout << "Verified: " << VerifyOrder(input_vector, less<int>{}) << "\n";
